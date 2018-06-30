@@ -1,0 +1,15 @@
+.products {
+
+}
+
+.product-item {
+	margin: 5px;
+}
+
+.product-item:hover {
+	box-shadow: 0 0 5px #555;
+}
+
+.product-img {
+	padding: 20px;
+}

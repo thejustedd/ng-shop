@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrderService } from './order.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  orderCount: number;
+
+  constructor(private orderService: OrderService) {
+    this.orderService.getOrders()
+      .subscribe(orders => this.orderCount = orders.length);
+  }
 }

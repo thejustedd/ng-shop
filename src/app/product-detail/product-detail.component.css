@@ -1,0 +1,15 @@
+.images {
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.images img {
+	width: 100%;
+}
+
+.quantity {
+	display: inline-block;
+	width: 80px;
+	vertical-align: middle;
+}

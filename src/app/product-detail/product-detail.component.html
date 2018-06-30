@@ -1,0 +1,22 @@
+<div *ngIf="product" class="detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="mb-3">{{ product.title }}</h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="images mb-3 mb-sm-0">
+          <img src="{{ product.images[0] }}" alt="{{ product.title }}">
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="desc mb-3">{{ product.description }}</div>
+        <div>
+          <button class="btn btn-primary">Купить</button>&nbsp;
+          <input type="number" class="form-control quantity" value="1" min="1" max="{{ product.quantity }}"> &nbsp;
+          <span>Доступно: {{ product.quantity }} шт.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
