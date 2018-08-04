@@ -7,7 +7,7 @@ export class InMemoryDataService implements InMemoryDbService {
     const products: Product[] = [
       {
         id: 1,
-        title: 'iPhone X 3/64GB Gray',
+        name: 'iPhone X 3/64GB Gray',
         description: `
           "Это будущее на ближайшие 10 лет" - так представил юбилейную, десятую версию iPhone, Тим Кук, руководитель Apple.
           iPhone X вобрал в себя самые интересные и необычные наработки компании. В первую очередь это касается внешнего вида смартфона.
@@ -24,13 +24,13 @@ export class InMemoryDataService implements InMemoryDbService {
           к примеру на основе своего лица вы можете делать анимированные Emoji, которые называются Animoji.
           Еще одной фишкой iPhone X является поддержка дополненной реальности за счет процессора Apple A11 Bionic и пары основных камер.
         `,
-        quantity: 38,
+        available_quantity: 38,
         price: 1000,
         images: ['https://img.mvideo.ru/Pdb/30030163b.jpg']
       },
       {
         id: 2,
-        title: 'Xiaomi Redmi 5 Plus 3/32GB Black',
+        name: 'Xiaomi Redmi 5 Plus 3/32GB Black',
         description: `
           Xiaomi Redmi 5 Plus - продолжение линейки крупноформатных смартфонов с хорошим соотношением цены и качества.
           В этом поколении, смартфон получил дисплей с диагональю 5,9 дюймов. Но, не стоит бояться за удобство использования,
@@ -41,13 +41,13 @@ export class InMemoryDataService implements InMemoryDbService {
           Redmi 5 Plus оснащен аккумулятором на 4000 мАч,
           поэтому не стоит переживать за время автономной работы, в этом случае оно очень неплохое.
         `,
-        quantity: 129,
+        available_quantity: 129,
         price: 150,
         images: ['https://hotline.ua/img/tx/158/158751257_s265.jpg']
       },
       {
         id: 3,
-        title: 'Xiaomi Redmi Note 5 3/32GB Black',
+        name: 'Xiaomi Redmi Note 5 3/32GB Black',
         description: `
           Xiaomi Redmi Note 5 – смартфон для тех, кто хочет получить максимально сбалансированный девайс,
           имеющий хороший экран, производительность, достаточно высокое качество и, при этом, доступную стоимость.
@@ -60,13 +60,13 @@ export class InMemoryDataService implements InMemoryDbService {
           Xiaomi Redmi Note 5 как и старшие модели имеет сдвоенную камеру, состоящую из сенсоров на 12 и 5 МП.
           Приятным бонусом выступает также поддержка быстрой зарядки и технологии Bluetooth 5.0.
         `,
-        quantity: 73,
+        available_quantity: 73,
         price: 180,
         images: ['https://hotline.ua/img/tx/169/169097264_s265.jpg']
       },
       {
         id: 4,
-        title: 'Xiaomi Redmi 5 Plus 4/64GB Black',
+        name: 'Xiaomi Redmi 5 Plus 4/64GB Black',
         description: `
           Диагональ экрана: 5.99";
           Разрешение экрана: 2160x1080;
@@ -75,13 +75,13 @@ export class InMemoryDataService implements InMemoryDbService {
           Оперативная память: 4 Гб;
           Внутренняя память: 64 Гб;
         `,
-        quantity: 129,
+        available_quantity: 129,
         price: 165,
         images: ['https://hotline.ua/img/tx/158/158751257_s265.jpg']
       },
       {
         id: 5,
-        title: 'Xiaomi Redmi Note 5 4/64GB Black',
+        name: 'Xiaomi Redmi Note 5 4/64GB Black',
         description: `
           Диагональ экрана: 5.99";
           Разрешение экрана: 2160x1080;
@@ -90,13 +90,13 @@ export class InMemoryDataService implements InMemoryDbService {
           Оперативная память: 4 Гб;
           Внутренняя память: 64 Гб;
         `,
-        quantity: 73,
+        available_quantity: 73,
         price: 195,
         images: ['https://hotline.ua/img/tx/169/169097264_s265.jpg']
       },
       {
         id: 6,
-        title: 'iPhone X 3/256GB Gray',
+        name: 'iPhone X 3/256GB Gray',
         description: `
           Диагональ экрана: 5.99";
           Разрешение экрана: 2160x1080;
@@ -105,7 +105,7 @@ export class InMemoryDataService implements InMemoryDbService {
           Оперативная память: 3 Гб;
           Внутренняя память: 256 Гб;
         `,
-        quantity: 38,
+        available_quantity: 38,
         price: 1200,
         images: ['https://img.mvideo.ru/Pdb/30030163b.jpg']
       }

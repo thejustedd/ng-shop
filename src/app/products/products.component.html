@@ -9,14 +9,14 @@
       <div class="col-md-4" *ngFor="let product of products">
         <div class="card product-item">
           <a routerLink="/products/{{ product.id }}">
-            <img class="card-img-top product-img" src="{{ product.images[0] }}" alt="{{ product.title }}">
+            <img class="card-img-top product-img" src="{{ product.images[0] }}" alt="{{ product.name }}">
           </a>
           <div class="card-body">
             <h5 class="card-title">
-              <a href="/products/{{ product.id }}">{{ product.title }}</a>
+              <a routerLink="/products/{{ product.id }}">{{ product.name }}</a>
             </h5>
             <p class="card-text">Цена: {{ product.price | currency }}</p>
-            <a href="#" class="btn btn-primary">Купить</a>
+            <button type="button" (click)="addOrder(product)" class="btn btn-primary">Купить</button>
           </div>
         </div>
       </div>

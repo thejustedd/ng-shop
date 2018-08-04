@@ -1,6 +1,11 @@
 import { Product } from './product';
 
 export class Order {
-  product: Product;
-  quantity: number;
+  public product: Product;
+  public quantity: number;
+
+  constructor(product: Product, quantity: number = 1) {
+    this.product = product;
+    this.quantity = quantity;
+  }
 }

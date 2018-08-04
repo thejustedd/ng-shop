@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../order';
-import { OrderService } from '../order.service';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,17 +9,22 @@ import { OrderService } from '../order.service';
 })
 export class CartComponent implements OnInit {
   orders: Order[];
-  // total = 250;
 
-  constructor(private orderService: OrderService) { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
-    this.getOrders();
+    this.orders =  this.getOrders();
   }
 
-  getOrders(): void {
-    this.orderService.getOrders()
-      .subscribe(orders => this.orders = orders);
+  getOrders(): Order[] {
+    return this.cartService.getOrders();
+    // const orders = this.cartService.getOrders();
+    // return orders ? orders : [];
+      // .subscribe(orders => this.orders = orders);
+  }
+
+  deleteOrder(id: number) {
+    this.orders = this.cartService.deleteOrder(id);
   }
 
   getTotalPrice(): number {

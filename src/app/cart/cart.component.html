@@ -14,23 +14,30 @@
         <th>Количество</th>
         <th>Цена</th>
         <th>Сумма</th>
+        <th></th>
       </tr>
       <tr class="order" *ngFor="let order of orders">
         <td width="80" height="80">
-          <img class="img-fluid" src="{{ order.product.images[0] }}" alt="{{ order.product.title }}">
+          <img class="img-fluid" src="{{ order.product.images[0] }}" alt="{{ order.product.name }}">
         </td>
         <td>
-          <a routerLink="/products/{{ order.product.id }}">{{ order.product.title }}</a>
+          <a routerLink="/products/{{ order.product.id }}">{{ order.product.name }}</a>
         </td>
         <td width="120">
-          <input class="form-control" type="number" [(ngModel)]="order.quantity" min="1" max="{{ order.product.quantity }}">
+          <input class="form-control" type="number" [(ngModel)]="order.quantity" min="1" max="{{ order.product.available_quantity }}" required>
         </td>
         <td>{{ order.product.price | currency }}</td>
         <td>{{ order.quantity * order.product.price | currency }}</td>
+        <td>
+          <button type="button" (click)="deleteOrder(order.product.id)" class="close">
+            <span>&times;</span>
+          </button>
+        </td>
       </tr>
       <tr class="total" *ngIf="orders">
         <th colspan="4" class="text-right">Итого: </th>
         <th>{{ getTotalPrice() | currency }}</th>
+        <th></th>
       </tr>
     </table>
   </div>

@@ -8,7 +8,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
